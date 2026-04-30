@@ -1,9 +1,9 @@
-// components/home/Banner.jsx
+'use client'
 import Link from "next/link";
 
 const Banner = () => {
   return (
-    <div className="w-full-400  mt-2"> 
+    <div className="w-full-400 bg-slate-100  mt-2"> 
      <section className="w-full  px-6 md:px-16 py-12 md:py-0 md:min-h-145 flex flex-col justify-between overflow-hidden">
 
       {/* Top: two-column layout */}

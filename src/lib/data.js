@@ -1,6 +1,5 @@
-
 export async function data(){
-    const bookData = await fetch('/public/bookData.json');
-    const res =await bookData.json();
-    return res;
+ const res = await fetch("https://book-borrowing-server.onrender.com/books");
+    const books = await res.json();
+    return books;
 }
