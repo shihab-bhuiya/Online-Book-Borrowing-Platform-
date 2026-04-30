@@ -1,0 +1,110 @@
+{"books":[
+  {
+    "id": 1,
+    "title": "The Silent Forest",
+    "author": "Ayesha Rahman",
+    "description": "A mysterious story about a forest where time seems to stand still.",
+    "category": "Story",
+    "available_quantity": 12,
+    "image_url": "https://example.com/images/silent-forest.jpg"
+  },
+  {
+    "id": 2,
+    "title": "C++ for Beginners",
+    "author": "John Smith",
+    "description": "A practical guide to learning C++ programming from scratch.",
+    "category": "Tech",
+    "available_quantity": 8,
+    "image_url": "https://example.com/images/cpp-beginners.jpg"
+  },
+  {
+    "id": 3,
+    "title": "The Space Beyond",
+    "author": "Dr. Emily Carter",
+    "description": "An exploration of galaxies, stars, and the mysteries of the universe.",
+    "category": "Science",
+    "available_quantity": 5,
+    "image_url": "https://example.com/images/space-beyond.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Khuda Ki Basti",
+    "author": "Shaukat Siddiqui",
+    "description": "A powerful story about life in Karachi’s slums after independence and the struggles of the poor.",
+    "category": "Story",
+    "available_quantity": 9,
+    "image_url": "https://example.com/images/khuda-ki-basti.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Udaas Naslain",
+    "author": "Abdullah Hussain",
+    "description": "A masterpiece novel covering the events leading to the partition of the subcontinent.",
+    "category": "Story",
+    "available_quantity": 6,
+    "image_url": "https://example.com/images/udaas-naslain.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Aangan",
+    "author": "Khadija Mastoor",
+    "description": "A classic story of love, family, and partition-era struggles.",
+    "category": "Story",
+    "available_quantity": 7,
+    "image_url": "https://example.com/images/aangan.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Peer-e-Kamil",
+    "author": "Umera Ahmed",
+    "description": "A spiritual and emotional journey of transformation, faith, and self-discovery.",
+    "category": "Story",
+    "available_quantity": 11,
+    "image_url": "https://example.com/images/peer-e-kamil.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Raja Gidh",
+    "author": "Bano Qudsia",
+    "description": "A philosophical novel exploring morality, society, and human psychology.",
+    "category": "Story",
+    "available_quantity": 10,
+    "image_url": "https://example.com/images/raja-gidh.jpg"
+  },
+  {
+    "id": 9,
+    "title": "React Made Easy",
+    "author": "David Miller",
+    "description": "A beginner-friendly guide to building apps using React.",
+    "category": "Tech",
+    "available_quantity": 11,
+    "image_url": "https://example.com/images/react-easy.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Data Structures Simplified",
+    "author": "Michael Johnson",
+    "description": "Clear explanations of data structures with practical examples.",
+    "category": "Tech",
+    "available_quantity": 6,
+    "image_url": "https://example.com/images/data-structures.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Quantum World",
+    "author": "Dr. Alan Brooks",
+    "description": "A deep dive into quantum physics and its strange phenomena.",
+    "category": "Science",
+    "available_quantity": 6,
+    "image_url": "https://example.com/images/quantum-world.jpg"
+  },
+  {
+    "id": 12,
+    "title": "The Wonders of Biology",
+    "author": "Dr. Lisa Wong",
+    "description": "Exploring the complexity and beauty of living organisms.",
+    "category": "Science",
+    "available_quantity": 5,
+    "image_url": "https://example.com/images/biology-wonders.jpg"
+  }
+]}
