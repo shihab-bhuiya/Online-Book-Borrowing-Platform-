@@ -2,10 +2,15 @@
 import React from 'react';
 import NavLink from '@/component/shared/NavLink';
 import Image from 'next/image';
-import Link from 'next/link';
 import logo from "../../assets/logo.png";
+import { authClient } from '@/lib/auth-client';
+import Link from 'next/link';
+// import { RxAvatar } from 'react-icons/rx';
 
 const NavBar = () => {
+  const { data: session, isPending } = authClient.useSession();
+ console.log("USer",session);
+ const user = session?.user;
     const link = <>
         <div className='gap-4 flex' > 
                     <NavLink href={'/homepage'}>Home </NavLink>
@@ -34,9 +39,17 @@ const NavBar = () => {
   <div className="navbar-center hidden lg:flex">
     {link}
   </div>
-  <div className="navbar-end">
-    <NavLink href="/login"> <button className='btn '>LogIn </button></NavLink>
-  </div>
+  { isPending ? ( <div className='navbar-end'> <span className="loading loading-dots loading-xl"></span></div>) : user ? <div className="navbar-end ">
+    <h2 className='m-2'>{user?.name}</h2>
+
+      <Image src={user?.image_url } alt='image' height={30} width={30} className='rounded-xl'/>
+    <button className='btn' onClick={async ()=>await authClient.signOut()}>Log Out</button>
+
+  </div> :
+  <div className='navbar-end'>
+
+    <NavLink href="/login"> <button className='btn  '>LogIn </button></NavLink>
+  </div>}
 </div>
     );  
 };
