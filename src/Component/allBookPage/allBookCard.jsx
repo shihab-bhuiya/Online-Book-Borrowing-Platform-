@@ -48,14 +48,14 @@ const AllBooks = ({ books }) => {
       {/* Results count */}
       {search && (
         <p className="text-center text-gray-500 mb-6">
-          Found <span className="font-semibold text-blue-600">{filteredBooks.length}</span> result(s) for "<span className="font-semibold">{search}</span>"
+          Found <span className="font-semibold text-blue-600">{filteredBooks.length}</span> result(s) for <span className="font-semibold">{search}</span>
         </p>
       )}
 
       {/* Books Grid */}
       {filteredBooks.length === 0 ? (
         <div className="text-center text-gray-400 text-xl py-20">
-          No books found for "{search}" 😔
+          No books found for {search} 😔
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
