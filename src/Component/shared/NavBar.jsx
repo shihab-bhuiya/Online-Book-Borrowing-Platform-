@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import NavLink from '@/Component/shared/NavLink';
+import NavLink from '@/component/shared/NavLink';
 import Image from 'next/image';
 import Link from 'next/link';
 import logo from "../../assets/logo.png";

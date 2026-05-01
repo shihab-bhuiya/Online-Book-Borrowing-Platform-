@@ -20,10 +20,10 @@ const Banner = () => {
             Explore thousands of books across different genres and find the perfect book for you.
           </p>
 
-          <Link href="/all-books">
+          <Link href="/allBooks">
             <button className="flex items-center gap-3 bg-[#1A56DB] hover:bg-[#1447C0] text-white font-semibold text-lg px-8 py-4 rounded-xl transition duration-300 mb-3">
               <span>📖</span>
-            <Link href={'/allBooks'}>Browse Now </Link>  
+           Browse Now 
               <span>→</span>
             </button>
           </Link>

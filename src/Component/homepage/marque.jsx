@@ -16,7 +16,7 @@ const Marque = async () => {
     // console.log("BOOKS",books);
     return (
         <div>
-            <marquee >
+            <marquee > <h2>Books are: </h2>
                 {books.map((n) =>
                     <span key={n.id} className='mr-4'> {n.title}</span>
                  )}
