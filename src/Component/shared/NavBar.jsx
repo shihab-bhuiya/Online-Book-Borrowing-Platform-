@@ -42,7 +42,7 @@ const NavBar = () => {
   { isPending ? ( <div className='navbar-end'> <span className="loading loading-dots loading-xl"></span></div>) : user ? <div className="navbar-end ">
     <h2 className='m-2'>{user?.name}</h2>
 
-      <Image src={user?.image_url } alt='image' height={30} width={30} className='rounded-xl'/>
+      <Image src={user?.image } alt='image' height={30} width={30} className='rounded-xl'/>
     <button className='btn' onClick={async ()=>await authClient.signOut()}>Log Out</button>
 
   </div> :

@@ -20,7 +20,7 @@ const RegisterPage = () => {
     email: email, // required
     password: password, // required
     image: photoURL,
-    callbackURL: '/login',
+    callbackURL: '/',
   });
   console.log(data, error);
   if(error){
@@ -93,7 +93,7 @@ const RegisterPage = () => {
               placeholder="Enter your password"
               className="w-full px-3 py-2 border rounded bg-gray-100 focus:outline-none"
             />
-            <span className="absolute right-3 t-8 " onClick={()=> setIsShowPassowrd(!isShowPassword)}>
+            <span className="absolute right-3 top-8 " onClick={()=> setIsShowPassowrd(!isShowPassword)}>
               {isShowPassword ? "Hide" :"Show" }</span>
             {
               errors.password && <p className="text-red-500">{errors.password.message}</p>

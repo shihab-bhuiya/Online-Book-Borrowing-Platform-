@@ -18,10 +18,15 @@ const BookDetails = async ({params}) => {
 
     
    
-    return (
-         <div> <BookDetail book={book} />;
+    return (<div className='grid grid-cols-12'> 
+        {/* left side */}
+     
+
+        {/* Card */}
+         <div className='col-span-9'> <BookDetail book={book} />;
          </div>
-        
+
+        </div>
     );
 };
 

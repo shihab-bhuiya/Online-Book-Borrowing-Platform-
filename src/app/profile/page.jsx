@@ -1,56 +1,70 @@
 'use client'
-import { useState } from 'react';
-import { authClient } from '@/lib/auth-client';
-import { toast } from 'react-toastify';
+import { authClient } from "@/lib/auth-client";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { toast } from "react-toastify";
 
 const Profile = () => {
-  const { data: session } = authClient.useSession();
+  const { data: session, isPending } = authClient.useSession();
   const user = session?.user;
 
-  const [name, setName] = useState(user?.name || '');
-  const [image, setImage] = useState(user?.image || '');
-  const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState('');
+  // Session is still loading
+  if (isPending) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+        <p className="text-gray-500">Loading...</p>
+      </div>
+    );
+  }
 
-  const handleUpdate = async () => {
-    setLoading(true);
-    const { data, error } = await authClient.updateUser({
-      name: name,
-      image: image,
-    });
+  // Session loaded but no user found
+  if (!user) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+        <p className="text-red-500">User not found. Please log in.</p>
+      </div>
+    );
+  }
 
-    if (error) {
-      toast.error(error.message);
-    } else {
-      toast.success('Profile updated successfully!');
-    }
-    setLoading(false);
-  };
-
+  // Session loaded and user exists
   return (
-    <div>
-      <input
-        type="text"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        placeholder="Your name"
-        className="input input-bordered"
-      />
-      <input
-        type="text"
-        value={image}
-        onChange={(e) => setImage(e.target.value)}
-        placeholder="Image URL"
-        className="input input-bordered"
-      />
-      <button
-        className="btn"
-        onClick={handleUpdate}
-        disabled={loading}
-      >
-        {loading ? 'Updating...' : 'Update Profile'}
-      </button>
-      {message && <p>{message}</p>}
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="bg-white shadow-lg rounded-2xl p-6 w-80 text-center">
+
+        {/* Profile Image */}
+        {user.image ? (
+          <Image
+            src={user.image}
+            alt="Profile"
+            height={96}
+            width={96}
+            className="mx-auto rounded-full border-4 border-blue-500"
+          />
+        ) : (
+          <div className="w-24 h-24 mx-auto rounded-full border-4 border-blue-500 bg-blue-100 flex items-center justify-center">
+            <span className="text-3xl font-bold text-blue-500">
+              {user.name?.charAt(0).toUpperCase() ?? "?"}
+            </span>
+          </div>
+        )}
+
+        {/* Name */}
+        <h2 className="text-xl font-semibold mt-4">{user.name}</h2>
+
+        {/* Email */}
+        <p className="text-gray-500">{user.email}</p>
+
+        {/* Update Button */}
+        <Link
+          href={"/updatepage"}
+          className="mt-5 inline-block px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
+          onClick={() => toast("Redirecting to update profile!")}
+        >
+          Update Info
+        </Link>
+
+      </div>
     </div>
   );
 };
