@@ -18,7 +18,7 @@ const BookDetails = async ({params}) => {
 
     
    
-    return (<div className='grid grid-cols-12'> 
+    return (<div className=''> 
         {/* left side */}
      
 
