@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 
 const LoginPage = () => {
@@ -27,6 +28,8 @@ const LoginPage = () => {
       })
 
       console.log(data,error);
+      toast.error(error.message);
+      
 
   }
 

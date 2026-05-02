@@ -17,7 +17,7 @@ const BookCard = ({n}) => {
     />
   </figure>
   <div className="card-body">
-    <h2 className="card-title text-base md:text-lg">{n.title}</h2>
+    <h2 className="card-title text-base md:text-lg swipe">{n.title}</h2>
     <p className="text-sm text-gray-500 line-clamp-2">{n.description}</p>
     <div className="card-actions justify-end mt-2">
      <Link href={`/bookDetails/${n.id}`}>  <button className="btn btn-primary btn-sm md:btn-md w-full">View Book Details</button></Link>
