@@ -1,12 +1,14 @@
 /** @format */
 'use client'
 import { authClient } from "@/lib/auth-client";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 
 const RegisterPage = () => {
   const [isShowPassword,setIsShowPassowrd] = useState(false);
+    const router = useRouter();
 
   const { register,handleSubmit,formState: { errors }} = useForm();
 
@@ -28,6 +30,7 @@ const RegisterPage = () => {
   }
   else{
      toast.success("SignUp Successfully");
+      router.push('/homepage')
   }
   }
 

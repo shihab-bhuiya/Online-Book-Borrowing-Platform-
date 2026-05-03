@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, { useState } from 'react';
 import NavLink from '@/component/shared/NavLink';
 import Image from 'next/image';
 import logo from "../../assets/logo.png";
@@ -12,6 +12,7 @@ const NavBar = () => {
   const { data: session, isPending } = authClient.useSession();
  console.log("USer",session);
  const user = session?.user;
+  const [imgError, setImgError] = useState(false);
     const link = <>
         <div className='gap-4 flex' > 
                     <NavLink href={'/homepage'}>Home </NavLink>
@@ -43,7 +44,19 @@ const NavBar = () => {
   { isPending ? ( <div className='navbar-end'> <span className="loading loading-dots loading-xl"></span></div>) : user ? <div className="navbar-end ">
     <h2 className='m-2'>{user?.name}</h2>
 
-      <Image src={user?.image || <CgProfile />} alt='image' height={30} width={30} className='rounded-xl'/>
+     {user?.image && !imgError ? (
+  <Image
+    src={user.image}
+    alt="profile"
+    height={30}
+    width={30}
+    className="rounded-xl"
+    onError={() => setImgError(true)}
+  />
+) : (
+  <CgProfile size={30} />
+)}
+    
     <button className='btn' onClick={async ()=>await authClient.signOut()}>Log Out</button>
 
   </div> :

@@ -4,6 +4,7 @@ import Marque from '@/component/homepage/marque';
 import BookCard from "@/component/homepage/bookCard"
 import { data } from '@/lib/data';
 import Tips from '@/component/homepage/tips';
+import TopBooks from '@/component/homepage/topBooks';
 
 const HomePage = async () => {
     const books = await data();
@@ -31,6 +32,11 @@ const HomePage = async () => {
             </div> </div>
             <div className='max-width-300 container mx-auto space-y-5 mt-10'>
                 <Tips></Tips>
+            </div>
+            <div>
+
+            <TopBooks books={books}/>
+
             </div>
         </div>
     );

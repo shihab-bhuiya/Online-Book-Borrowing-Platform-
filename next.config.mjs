@@ -8,7 +8,15 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "i.ibb.co", // ← also add this, ibb.co serves images from this subdomain
+        hostname: "i.ibb.co",
+      },
+      {
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com",
+      },
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
       },
     ],
   },
