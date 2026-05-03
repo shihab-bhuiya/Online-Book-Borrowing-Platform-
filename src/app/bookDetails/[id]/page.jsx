@@ -1,4 +1,4 @@
-import BookDetail from '../../../component/bookDetail';
+import BookDetail from '@/component/bookDetail';
 import { data } from '@/lib/data';
 import Image from 'next/image';
 import Link from 'next/link';

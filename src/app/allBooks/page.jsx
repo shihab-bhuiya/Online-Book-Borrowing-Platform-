@@ -1,5 +1,5 @@
-import { data } from '../../lib/data';
-import AllBooksClient from '../../component/allBookPage/allBooksClient';
+import { data } from '@/lib/data';
+import AllBooksClient from '@/component/allBookPage/allBooksClient';
 
 const AllBooksPage = async () => {
   const books = await data();
