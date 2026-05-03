@@ -3,6 +3,7 @@ import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { CgProfile } from "react-icons/cg";
 import { toast } from "react-toastify";
 
 const Profile = () => {
@@ -35,7 +36,7 @@ const Profile = () => {
         {/* Profile Image */}
         {user.image ? (
           <Image
-            src={user.image}
+            src={user.image || <CgProfile />}
             alt="Profile"
             height={96}
             width={96}

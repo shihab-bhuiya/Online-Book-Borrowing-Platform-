@@ -6,7 +6,7 @@ import React from 'react';
 const BookCard = ({n}) => {
     // const books = data();
     return (
-        <div className="card bg-base-100 w-full shadow-md">
+        <div className="card bg-slate-100 w-full shadow-md">
   <figure className="h-48 overflow-hidden">
     <Image
       src={n.image_url}

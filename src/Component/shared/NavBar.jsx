@@ -5,6 +5,7 @@ import Image from 'next/image';
 import logo from "../../assets/logo.png";
 import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
+import { CgProfile } from 'react-icons/cg';
 // import { RxAvatar } from 'react-icons/rx';
 
 const NavBar = () => {
@@ -19,7 +20,7 @@ const NavBar = () => {
                     </div>
     </>
     return (
-       <div className="navbar bg-base-100 shadow-sm container mx-auto p-4">
+       <div className="navbar h-30 sticky top-0 z-50 bg-slate-100 shadow-sm container mx-auto p-4">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -42,7 +43,7 @@ const NavBar = () => {
   { isPending ? ( <div className='navbar-end'> <span className="loading loading-dots loading-xl"></span></div>) : user ? <div className="navbar-end ">
     <h2 className='m-2'>{user?.name}</h2>
 
-      <Image src={user?.image } alt='image' height={30} width={30} className='rounded-xl'/>
+      <Image src={user?.image || <CgProfile />} alt='image' height={30} width={30} className='rounded-xl'/>
     <button className='btn' onClick={async ()=>await authClient.signOut()}>Log Out</button>
 
   </div> :
