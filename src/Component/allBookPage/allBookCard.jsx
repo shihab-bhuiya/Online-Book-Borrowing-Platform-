@@ -1,5 +1,5 @@
 'use client'
-import BookCard from "@/Component/homepage/bookCard";
+import BookCard from "../../component/homepage/bookCard";
 import React, { useState } from "react";
 
 const AllBooks = ({ books }) => {
