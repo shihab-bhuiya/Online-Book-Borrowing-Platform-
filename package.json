@@ -30,3 +30,6 @@
     "tailwindcss": "^4"
   }
 }
+"build": "next build"
+
+"build": "next build --no-turbo"
