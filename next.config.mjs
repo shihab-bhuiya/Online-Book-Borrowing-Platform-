@@ -1,5 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    turbo: {
+      resolveAlias: {
+        '@': './src',
+      },
+    },
+  },
   images: {
     remotePatterns: [
       {
@@ -21,5 +28,4 @@ const nextConfig = {
     ],
   },
 };
-
 export default nextConfig;
