@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import NavBar from "../component/shared/NavBar";
-import Footer from "./footer/page";
+import NavBar from "../component/shared/NavBar.jsx";
+import Footer from "./footer/page.jsx";
 import { ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
