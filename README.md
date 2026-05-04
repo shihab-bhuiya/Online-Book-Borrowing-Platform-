@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📚 Online Book Borrowing Platform
 
-## Getting Started
+A seamless and modern web application designed to digitize the traditional library experience. Users can explore a curated collection of books, filter by categories, and borrow titles digitally — all secured with BetterAuth and built on Next.js.
 
-First, run the development server:
+## 🌐 Live URL
+
+🔗 [https://online-book-borrowing-platform-h7hs.vercel.app/homepage](https://online-book-borrowing-platform-h7hs.vercel.app/homepage)
+
+## 📌 Purpose
+
+This platform brings the library experience online — allowing users to browse books, view detailed information, and borrow available copies with a clean, responsive interface across all devices.
+
+## ✨ Key Features
+
+- 🔐 **Secure Authentication** – Email/password login and Google OAuth via BetterAuth
+- 📖 **Browse All Books** – Search by title and filter by category (Story, Tech, History, Science)
+- 📄 **Book Details Page** – View full book info including availability *(private route)*
+- 🛒 **Borrow System** – Borrow available books with confirmation toast feedback
+- 👤 **My Profile** – View and update user name and avatar *(private route)*
+- 🏠 **Home Page** – Featured books, marquee, book selection tips, and top books section
+- 📱 **Fully Responsive** – Optimized for mobile, tablet, and desktop
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| [Next.js](https://nextjs.org/) | React framework (SSR + routing) |
+| [Tailwind CSS](https://tailwindcss.com/) | Utility-first styling |
+| [DaisyUI](https://daisyui.com/) | Component library |
+| [BetterAuth](https://better-auth.com/) | Authentication |
+| [MongoDB](https://www.mongodb.com/) | Database |
+
+## 📦 NPM Packages Used
+
+| Package | Usage |
+|---------|-------|
+| `better-auth` | Auth (login, register, Google OAuth, session, profile update) |
+| `next` | App framework with file-based routing |
+| `react-icons` | Icons (CgProfile and more) |
+| `react-hot-toast` | Toast notifications |
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js v18+
+- MongoDB URI
+- Google OAuth credentials
+
+### Installation
+
+```bash
+git clone https://github.com/your-username/online-book-borrowing-platform.git
+cd online-book-borrowing-platform
+npm install
+```
+
+### Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
+MONGODB_URI=your_mongodb_connection_string
+BETTER_AUTH_SECRET=your_auth_secret
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+```
+
+### Run Locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000/homepage](http://localhost:3000/homepage) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+online-book-borrowing-platform/
+├── src/
+│   ├── app/                  # Next.js app router pages
+│   ├── assets/               # Static assets (logo.png, etc.)
+│   ├── component/
+│   │   └── shared/           # NavBar, NavLink, bookCard, leftSide, marque, tips, topBooks
+│   └── lib/
+│       └── auth-client.js    # BetterAuth client config
+├── public/
+├── .env
+├── next.config.js
+└── jsconfig.json
 
-## Learn More
+## 📄 Pages Overview
 
-To learn more about Next.js, take a look at the following resources:
+| Route | Access | Description |
+|-------|--------|-------------|
+| `/homepage` | Public | Banner, marquee, featured books, tips, top books |
+| `/allBooks` | Public | All books with search and category filter sidebar |
+| `/bookDetails/[id]` | Private | Single book details + borrow action |
+| `/profile` | Private | View and update user info |
+| `/category/[name]` | Public | Browse by category (Story, Tech, History, Science) |
+| `/about` | Public | About page |
+| `/contact` | Public | Contact page |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📚 Sample Books in Collection
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- The Silent Forest *(Story)*
+- C++ for Beginners *(Tech)*
+- The Space Beyond *(Science)*
+- Khuda Ki Basti, Udaas Naslain, Aangan, Peer-e-Kamil, Raja Gidh *(Story/Literature)*
 
-## Deploy on Vercel
+## 👨‍💻 Author
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Your Name**  
+GitHub: [@your-username](https://github.com/your-username)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© 2026 Online Book Borrowing Platform. All rights reserved.

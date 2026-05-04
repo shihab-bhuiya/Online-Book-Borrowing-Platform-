@@ -24,8 +24,8 @@ const NavBar = () => {
        <div className="navbar h-30 sticky top-0 z-50 bg-slate-100 shadow-sm container mx-auto p-4">
   <div className="navbar-start">
     <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-        <Image src={logo} alt="logo" height={30} width={30} />
+      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden m-5">
+        <Image src={logo} alt="logo" height={20} width={30} />
       </div>
       <ul
         tabIndex="-1"
@@ -41,6 +41,7 @@ const NavBar = () => {
   <div className="navbar-center hidden lg:flex">
     {link}
   </div>
+  
   { isPending ? ( <div className='navbar-end'> <span className="loading loading-dots loading-xl"></span></div>) : user ? <div className="navbar-end ">
     <h2 className='m-2'>{user?.name}</h2>
 
@@ -57,12 +58,12 @@ const NavBar = () => {
   <CgProfile size={30} />
 )}
     
-    <button className='btn' onClick={async ()=>await authClient.signOut()}>Log Out</button>
+    <button className='btn bg-red-400 rounded-2xl' onClick={async ()=>await authClient.signOut()}>Log Out</button>
 
   </div> :
   <div className='navbar-end'>
 
-    <NavLink href="/login"> <button className='btn  '>LogIn </button></NavLink>
+    <NavLink href="/login"> <button className='b  bg-red-300 '>LogIn </button></NavLink>
   </div>}
 </div>
     );  
