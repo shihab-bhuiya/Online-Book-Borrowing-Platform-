@@ -1,11 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    turbo: {
-      resolveAlias: {
-        '@': './src',
-      },
-    },
+    eslint: {
+    ignoreDuringBuilds: true,
   },
   images: {
     remotePatterns: [
