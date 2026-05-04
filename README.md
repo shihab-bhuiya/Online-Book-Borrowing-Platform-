@@ -112,6 +112,6 @@ online-book-borrowing-platform/
 ## 👨‍💻 Author
 
 **Your Name**  
-GitHub: [@your-username](https://github.com/your-username)
+GitHub: [shihab-bhuiya](https://github.com/shihab-bhuiya)
 
 © 2026 Online Book Borrowing Platform. All rights reserved.
