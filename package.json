@@ -2,12 +2,12 @@
   "name": "online-book-borrowing-platform",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build --no-turbo",
-    "start": "next start",
-    "lint": "eslint"
-  },
+"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "eslint"
+},
   "dependencies": {
     "@better-auth/mongo-adapter": "^1.6.9",
     "better-auth": "^1.6.9",
