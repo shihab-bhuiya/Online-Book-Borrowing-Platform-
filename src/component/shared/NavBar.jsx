@@ -63,7 +63,7 @@ const NavBar = () => {
   </div> :
   <div className='navbar-end'>
 
-    <NavLink href="/login"> <button className='b  '>LogIn </button></NavLink>
+    <NavLink href="/login"> <button className='btn '>LogIn </button></NavLink>
   </div>}
 </div>
     );  
