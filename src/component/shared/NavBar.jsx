@@ -58,12 +58,12 @@ const NavBar = () => {
   <CgProfile size={30} />
 )}
     
-    <button className='btn bg-red-400 rounded-2xl' onClick={async ()=>await authClient.signOut()}>Log Out</button>
+    <button className='btn rounded-2xl' onClick={async ()=>await authClient.signOut()}>Log Out</button>
 
   </div> :
   <div className='navbar-end'>
 
-    <NavLink href="/login"> <button className='b  bg-red-300 '>LogIn </button></NavLink>
+    <NavLink href="/login"> <button className='b  '>LogIn </button></NavLink>
   </div>}
 </div>
     );  
